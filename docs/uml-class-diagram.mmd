@@ -1,0 +1,19 @@
+classDiagram
+    class HomeTheaterDemo
+    class HomeTheaterFacade {
+        +watchMovie(movieTitle: String) void
+        +endMovie() void
+    }
+    class Amplifier
+    class DiscPlayer
+    class Projector
+    class Screen
+    class TheaterLights
+    class PopcornPopper
+    HomeTheaterDemo ..> HomeTheaterFacade : uses
+    HomeTheaterFacade --> Amplifier : coordinates
+    HomeTheaterFacade --> DiscPlayer : coordinates
+    HomeTheaterFacade --> Projector : coordinates
+    HomeTheaterFacade --> Screen : coordinates
+    HomeTheaterFacade --> TheaterLights : coordinates
+    HomeTheaterFacade --> PopcornPopper : coordinates
