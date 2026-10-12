@@ -1,6 +1,4 @@
 package edu.aitu.facade.hometheater.subsystem;
-
-/** Controls projector power, input selection, and display mode. */
 public final class Projector {
     private boolean poweredOn;
     private String input = "None";

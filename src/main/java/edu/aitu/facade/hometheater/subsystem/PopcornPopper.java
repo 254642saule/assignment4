@@ -1,6 +1,4 @@
 package edu.aitu.facade.hometheater.subsystem;
-
-/** Controls the popcorn popper and records the number of servings made. */
 public final class PopcornPopper {
     private boolean poweredOn;
     private int servingsPopped;

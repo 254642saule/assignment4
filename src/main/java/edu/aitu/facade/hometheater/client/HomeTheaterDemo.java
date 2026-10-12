@@ -1,8 +1,6 @@
 package edu.aitu.facade.hometheater.client;
 
 import edu.aitu.facade.hometheater.facade.HomeTheaterFacade;
-
-/** Demonstrates the facade without directly accessing subsystem classes. */
 public final class HomeTheaterDemo {
     private HomeTheaterDemo() {
     }

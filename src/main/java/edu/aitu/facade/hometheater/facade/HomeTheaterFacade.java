@@ -9,8 +9,6 @@ import edu.aitu.facade.hometheater.subsystem.TheaterLights;
 
 import java.util.Objects;
 import java.util.function.Consumer;
-
-/** Offers simple movie-session operations over the home-theater subsystem. */
 public final class HomeTheaterFacade {
     private final Amplifier amplifier = new Amplifier();
     private final DiscPlayer discPlayer = new DiscPlayer();
@@ -20,18 +18,12 @@ public final class HomeTheaterFacade {
     private final PopcornPopper popcornPopper = new PopcornPopper();
     private final Consumer<String> output;
     private String activeMovieTitle;
-
-    /** Creates a facade that prints the coordinated steps to the console. */
     public HomeTheaterFacade() {
         this(System.out::println);
     }
-
-    /** Creates a facade with an output sink, useful for tests and alternate UIs. */
     public HomeTheaterFacade(Consumer<String> output) {
         this.output = Objects.requireNonNull(output, "Output sink must not be null.");
     }
-
-    /** Starts a movie session and configures all devices in the required order. */
     public void watchMovie(String movieTitle) {
         String title = requireMovieTitle(movieTitle);
         if (activeMovieTitle != null) {
@@ -61,8 +53,6 @@ public final class HomeTheaterFacade {
             throw failure;
         }
     }
-
-    /** Ends the active session and attempts every subsystem cleanup step. */
     public void endMovie() {
         if (activeMovieTitle == null) {
             throw new IllegalStateException("There is no active movie session to end.");

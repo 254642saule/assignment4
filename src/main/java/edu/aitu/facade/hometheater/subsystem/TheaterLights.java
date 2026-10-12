@@ -1,6 +1,4 @@
 package edu.aitu.facade.hometheater.subsystem;
-
-/** Sets the theater room's light brightness as a percentage. */
 public final class TheaterLights {
     private int brightness = 100;
 

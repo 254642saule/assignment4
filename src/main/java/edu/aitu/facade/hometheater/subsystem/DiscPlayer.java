@@ -1,6 +1,4 @@
 package edu.aitu.facade.hometheater.subsystem;
-
-/** Loads and controls playback of one movie at a time. */
 public final class DiscPlayer {
     private boolean poweredOn;
     private String loadedMovie;

@@ -1,6 +1,4 @@
 package edu.aitu.facade.hometheater.subsystem;
-
-/** Controls amplifier power, input, volume, and surround-sound mode. */
 public final class Amplifier {
     private boolean poweredOn;
     private String input = "None";
